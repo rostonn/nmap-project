@@ -62,7 +62,7 @@ Each nmap result is saved in the database with a Scan id. This way the same nmap
 
 To run the go test cases, make sure golang is installed. Run ```go test``` from the nmap-be folder, dal folder, dto folder
 
-To run the front end tests: ```nom test`` from the root project directory
+To run the front end tests: ```nom test``` from the root project directory
 
 ## Build Projects
 
