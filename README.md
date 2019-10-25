@@ -1,36 +1,36 @@
 # NMAP Results Application
 
-Pre-requisites
+## About
 
-Program is built to run on a Mac. There is also a Windows exe program although it hasn't been tested
-Sqlite3 must be installed: [(https://www.sqlite.org/download.html]https://www.sqlite.org/download.html)
+Project to load nmap scan results into sqlite database. Json api to return nmap results based on ip address. UI allows search by ip address to show nmap results.
+
+## Pre-requisites
+
+Program is built to run on a Mac
+Sqlite3 must be installed: [https://www.sqlite.org/download.html](https://www.sqlite.org/download.html)
 
 ### Pre-requisites to run and test backend application
 
-Backend application is included in the project root in the folder nmap-be. Also publicly available:
+Backend application is included in the project root, in the folder nmap-be. Also publicly available: [https://github.com/rostonn/nmap-be](https://github.com/rostonn/nmap-be)
 
 Golang must be installed to build the application and run the tests
 
-Frontend React application is included in the project root in the folder nmap-fe. Also publicly available:
+Frontend React application is included in the project root in the folder nmap-fe. Also publicly available: [https://github.com/rostonn/nmap-fe](https://github.com/rostonn/nmap-fe)
 
 Node and Npm are required to build the client application 
 
-
-
-Start Program
-
+## Program Execution Instructions
+ 
 1. Open Terminal
 2. Change directory into unzipped project folder
 3. cd into dist
-4. ./nmap-be
+4. run ./nmap-be
 5. Program will run at http://localhost:8080
 
 ## Usage
-
 ### Upload XML File of NMAP Results
 
-
-There is a simple webpage to upload an xml file of nmap results. An example xml file is included in the root project folder.
+There is a simple webpage to upload an xml file of nmap results. An example xml file is included in the root project folder. nmap.results/nmap.results.xml
 
 The file uploader application is available at:
 
@@ -68,16 +68,23 @@ To Build the react app ```npm build``` it will build to the build folder
 
 To build backend use ```go build``` or go install
 
+## Configuration
+
+Config json file is in dist/config/config.json
+
+Port and dbPath are configurable by editing this file.
 
 ## Other Notes
 
-This was a fun challenging project. Dealing with the entire full stack. I chose uploading an XML file because I hadn't used golang to parse XML before.
+This was a fun challenging project. Dealing with the entire application stack. I chose uploading an XML file because I hadn't used golang to parse XML before.
 
 ### Improvements
 
-I didn't add any validation on loading the xml file. Or any frontend validation on the IP address input box.
+Add validation on loading the xml file. Add frontend validation on the IP address input box.
 
-Add a bit more testing. I realize the entire application isn't tested, but all of the testing is set up
+Add a bit more testing.
+
+Add configurable option to serve app over HTTPS
 
 
 
